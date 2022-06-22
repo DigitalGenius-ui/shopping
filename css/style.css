@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: skyblue;
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.container .title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+
+/* cart part  */
+
+.carts .cart {
+    width: 19rem;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    /* write after design */
+    position: relative;
+    overflow: hidden;
+}
+
+.cart img{
+    width: 100%;
+    height: 13rem;
+    object-fit: contain;
+}
+
+.container .carts{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cart h1{
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+}
+
+.cart .stars{
+    font-size: 0.7rem;
+}
+
+.cart .icons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: gray;
+    padding: 0.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    border-radius: 5px;
+    /* transform: translateX(3rem); */
+    transition: transform 0.5s ease-in-out;
+}
+
+.icons .watch, .basket{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.watch:hover, .basket:hover{
+    color: rgba(255, 255, 255, 0.800);
+}
+
+.cart:hover .icons{
+    transform: translateX(0);
+}
+
+/* shopping part  */
+
+.shopContainer{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.shopContainer .shopping-flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.shopContainer .shopTitle{
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+}
+
+.shopContainer .shops{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.shops .shop{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.shop .shop-detail{
+    display: flex;
+}
+
+.shop-texts{
+    width: 28rem;
+}
+
+.shop-texts h1{
+    font-size: 1.3rem;
+}
+
+.shop-texts p{
+    font-size: 0.8rem;
+}
+
+.shop-texts .shop-price{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.shop img{
+    width: 12rem;
+    height: 12rem;
+    object-fit: contain;
+}
+
+.shop-btns button{
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+}
+
+.delete{
+    background-color: transparent;
+    margin-top: 1rem;
+    border: none;
+    border-right: 1px solid gray ;
+    border-left: 1px solid gray ;
+    padding: 0.1rem 0.5rem;
+    cursor: pointer;
+}
+
+.delete:hover{
+    color: rgba(60, 60, 60, 0.8);
+}
+
+/* subtotal part  */
+.subtotal{
+    background-color: #fff;
+    padding: 1rem;
+    height: 9rem;
+    border-radius: 5px;
+}
+
+.subtotal .total{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+}
+
+.subtotal p{
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.subtotal .payment-btn{
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+}
