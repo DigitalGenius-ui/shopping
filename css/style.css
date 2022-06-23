@@ -11,6 +11,7 @@ body{
     background-color: skyblue;
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 .container{
@@ -81,12 +82,76 @@ body{
     color: white;
 }
 
+
 .watch:hover, .basket:hover{
     color: rgba(255, 255, 255, 0.800);
 }
 
 .cart:hover .icons{
     transform: translateX(0);
+}
+
+/* details part  */
+
+.container .layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.600);
+    display: none;
+}
+
+.layer.active{
+    display: block;
+}
+
+.container .shop-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container .shop-details.active{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(1);
+}
+
+.shop-details img{
+    width: 15rem;
+}
+
+.shop-details .close{
+    background-color: transparent;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+}
+
+.close:hover{
+    color: rgba(0,0,0,0.500);
+}
+
+.shop-details h1{
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+}
+
+.shop-details .description{
+    font-size: 0.7rem;
+    padding-bottom: 0.3rem;
+}
+
+.shop-details .price{
+    font-size: 1.3rem;
+    font-weight: 700;
 }
 
 /* shopping part  */
@@ -98,7 +163,7 @@ body{
 
 .shopContainer .shopping-flex{
     display: flex;
-    gap: 1rem;
+    justify-content: space-between;
 }
 
 .shopContainer .shopTitle{
@@ -169,6 +234,10 @@ body{
 
 .delete:hover{
     color: rgba(60, 60, 60, 0.8);
+}
+
+.text{
+    font-size: 1.3rem;
 }
 
 /* subtotal part  */
